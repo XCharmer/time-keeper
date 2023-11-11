@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeKeeper</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header">
+        <div class="month-title"></div>
+        <div class="time-current">⌚</div>
+        <div class="time-left">⏳</div>
+      </header>
+
+      <div class="details-table">
+        <div class="details-cell">#</div>
+        <div class="details-cell">Total</div>
+        <div class="details-cell">Point Timer</div>
+        <div class="details-cell">Points R</div>
+        <div class="details-cell">Points T</div>
+        <div class="details-cell">Points Left</div>
+        <div class="details-cell">%</div>
+        <div class="details-cell">
+          <div class="action-title">Learn</div>
+          <div class="action-buttons">
+            <button id="learn-start-button">▶</button>
+            <button class="hidden" id="learn-stop-button">II</button>
+          </div>
+        </div>
+        <div id="learn-total" class="details-cell">4</div>
+        <div id="learn-point-timer" class="details-cell">6</div>
+        <div id="learn-points" class="details-cell">7</div>
+        <div id="learn-points-target" class="details-cell">8</div>
+        <div id="learn-points-left" class="details-cell">9</div>
+        <div id="learn-percent" class="details-cell">10</div>
+        <div class="details-cell">
+          <div class="action-title">Work</div>
+          <div class="action-buttons">
+            <button id="work-start-button">▶</button>
+            <button class="hidden" id="work-stop-button">II</button>
+          </div>
+        </div>
+        <div id="work-total" class="details-cell">12</div>
+        <div id="work-point-timer" class="details-cell">13</div>
+        <div id="work-points" class="details-cell">14</div>
+        <div id="work-points-target" class="details-cell">15</div>
+        <div id="work-points-left" class="details-cell">16</div>
+        <div id="work-percent" class="details-cell">17</div>
+        <div class="details-cell">
+          <div class="action-title">Physical</div>
+          <div class="action-buttons">
+            <button id="physical-start-button">▶</button>
+            <button class="hidden" id="physical-stop-button">II</button>
+          </div>
+        </div>
+        <div id="physical-total" class="details-cell">18</div>
+        <div id="physical-point-timer" class="details-cell">19</div>
+        <div id="physical-points" class="details-cell">20</div>
+        <div id="physical-points-target" class="details-cell">21</div>
+        <div id="physical-points-left" class="details-cell">22</div>
+        <div id="physical-percent" class="details-cell">23</div>
+      </div>
+
+      <div class="target-table">
+        <div class="details-cell">🅿</div>
+        <div class="details-cell">
+          <div id="point-timer" class="details-cell">00:00</div>
+          <div id="point-timer-logo" class="details-cell">L</div>
+        </div>
+        <div class="details-cell" id="x">
+          <div class="point-time-line">.</div>
+        </div>
+
+        <div class="details-cell">🎯</div>
+        <div class="details-cell" id="target-timer-cell">00:00</div>
+        <div class="details-cell" id="y">
+          <div class="target-time-line">.</div>
+        </div>
+
+        <div class="details-cell">🏆</div>
+        <div class="details-cell" id="all-targets-timer-cell">00:00</div>
+        <div class="details-cell" id="z">
+          <div class="useful-time-line">U</div>
+          <div class="learn-time-line">L</div>
+          <div class="work-time-line">W</div>
+          <div class="physical-time-line">Ph</div>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-left">
+          <button id="back-button">Back</button>
+        </div>
+        <div class="nav-center">
+          <div id="day-title"></div>
+        </div>
+        <div class="nav-right">
+          <button id="next-button">Next</button>
+        </div>
+      </nav>
+      <div class="weekdays">
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wenesday</div>
+        <div>Thuesday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+        <div>Sunday</div>
+      </div>
+      <div class="calendar"></div>
+      <div class="activated-day hidden"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
