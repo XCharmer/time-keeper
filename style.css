@@ -140,8 +140,22 @@ nav button {
   display: flex;
   height: 20px;
   background-color: #edf2ff;
-  justify-content: center;
+  justify-content: left;
   box-shadow: 0px 0px 3px #adb5bd;
+}
+
+.target-details-cell {
+  display: flex;
+  height: 20px;
+  background-color: #edf2ff;
+  justify-content: left;
+  box-shadow: 0px 0px 3px #adb5bd;
+  padding-left: 5px;
+}
+
+#point-timer-logo,
+#point-timer-logo-2 {
+  margin-left: 3px;
 }
 
 #x {
@@ -276,7 +290,7 @@ nav {
   display: flex;
   width: 100px;
   height: 100px;
-  padding: 10px;
+  padding: 7px;
   cursor: pointer;
   background-color: #edf2ff;
   margin: 5px;
@@ -294,6 +308,10 @@ nav {
   background-color: #afd3f0;
 }
 
+.selected {
+  background-color: #99e9f2;
+}
+
 .padding {
   cursor: default !important;
   background-color: #dde6ed !important;
@@ -302,10 +320,10 @@ nav {
 
 .activity {
   display: flex;
-  font-size: 12px;
-  padding: 2px;
+  font-size: 14px;
+
   /*   background-color: #58bae4; */
-  color: white;
+  color: #edf2ff;
   border-radius: 10px;
   justify-content: center;
   overflow: hidden;

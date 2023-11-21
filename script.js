@@ -335,7 +335,7 @@ const timeRecorder = function (act) {
 const selectDay = function (dayElement = 0) {
   let xDate, dayInd;
   if (dayElement) {
-    if (lastSelectedDay) lastSelectedDay.style.backgroundColor = 'white';
+    if (lastSelectedDay) lastSelectedDay.classList.remove('selected');
     xDate = dayElement.dataset.day;
     dayInd = dataBase.findIndex((e) => e.date === xDate);
     dayTitle.innerText = `${selectedMonth} ${xDate.split('/')[1]}`;
@@ -345,7 +345,6 @@ const selectDay = function (dayElement = 0) {
   }
   if (dayInd >= 0) {
     if (dayElement.id === 'current-day') {
-      dayElement.style.backgroundColor = '#e8f4fa';
       refreshDisplayAll();
       learnStartButton.classList.remove('hidden');
       workStartButton.classList.remove('hidden');
@@ -353,7 +352,7 @@ const selectDay = function (dayElement = 0) {
       targetTable.classList.remove('hidden');
     } else {
       clearInterval(timer);
-      dayElement.style.backgroundColor = 'rgb(206, 238, 190)';
+      dayElement.classList.add('selected');
       refreshDisplayAll(dayInd);
       hideButtons('start');
       hideButtons('stop');
@@ -364,7 +363,7 @@ const selectDay = function (dayElement = 0) {
     console.log('!!!');
     const clearDayInd = dataBase.findIndex((e) => e.date === 0);
     clearInterval(timer);
-    if (dayElement) dayElement.style.backgroundColor = 'rgb(206, 238, 190)';
+    if (dayElement) dayElement.classList.add('selected');
     refreshDisplayAll(clearDayInd);
     hideButtons('start');
     hideButtons('stop');
