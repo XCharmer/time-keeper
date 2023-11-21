@@ -41,6 +41,7 @@ const actionCells = {
 const pointTimeLine = document.querySelector('.point-time-line');
 const pointTimerCell = document.getElementById('point-timer');
 const pointTimerLogoCell = document.getElementById('point-timer-logo');
+const pointTimerLogoCell2 = document.getElementById('point-timer-logo-2');
 const targetTimeLine = document.querySelector('.target-time-line');
 const targetTimerCell = document.getElementById('target-timer-cell');
 const usefulTimeLine = document.querySelector('.useful-time-line');
@@ -149,7 +150,7 @@ const load = function () {
 
   const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
-  document.querySelector('.month-title').innerText = `📅 ${monthName} ${year}`;
+  document.querySelector('.month-title').innerText = ` ${monthName} ${year}`;
 
   calendar.innerHTML = '';
 
@@ -229,6 +230,7 @@ const refreshDisplay = function (act, dayInd = 0) {
 const refreshPointLine = function (act) {
   pointTimeLine.style.flex = 1 - (600 - dataBase[0][`${act}PointsTimer`]) / 600;
   pointTimerLogoCell.innerText = act.charAt(0).toUpperCase();
+  pointTimerLogoCell2.innerText = act.charAt(0).toUpperCase();
   pointTimerCell.innerText = timeFormater(dataBase[0][`${act}PointsTimer`]);
   targetTimeLine.style.flex =
     (dataBase[0][`${act}PointsTarget`] * 600 - dataBase[0][`${act}Time`]) /
@@ -242,7 +244,6 @@ const refreshPointLine = function (act) {
   targetTimeLine.classList.remove('work');
   targetTimeLine.classList.remove('physical');
   targetTimeLine.classList.add(act);
-  targetTimeLine.innerText = act.charAt(0).toUpperCase();
   usefulTimeLine.style.flex =
     dataBase[0].learnTime + dataBase[0].workTime + dataBase[0].physicalTime;
   alltargetsTimerCell.innerText = timeFormater(
@@ -300,11 +301,11 @@ const setTime = function () {
     refreshPage();
   }
 
-  timeCurrentPannel.innerText = `🕘 ${hours < 10 ? `0${hours}` : hours}:${
+  timeCurrentPannel.innerText = `${hours < 10 ? `0${hours}` : hours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
 
-  timeLeftPannel.innerText = `${23 - hours} h ${60 - minutes} min ⏳`;
+  timeLeftPannel.innerText = `${23 - hours} h ${60 - minutes} min`;
 };
 
 setInterval(setTime, 1000);

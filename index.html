@@ -3,15 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TimeKeeper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <title>TimeKeeper</title>
   </head>
   <body>
     <div class="container">
       <header class="main-header">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-48-56a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V160H104a8,8,0,0,1,0-16h16V128a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,152Z"
+            ></path>
+          </svg>
+        </div>
         <div class="month-title"></div>
-        <div class="time-current">⌚</div>
-        <div class="time-left">⏳</div>
+        <div class="time-current"></div>
+        <div class="time-left"></div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76Zm56,78L98.67,96h58.4Zm56,98H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z"
+            ></path>
+          </svg>
+        </div>
       </header>
 
       <div class="details-table">
@@ -64,28 +96,67 @@
       </div>
 
       <div class="target-table">
-        <div class="details-cell">🅿</div>
-        <div class="details-cell">
-          <div id="point-timer" class="details-cell">00:00</div>
-          <div id="point-timer-logo" class="details-cell">L</div>
+        <div class="logo-cell">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM140,80v96a8,8,0,0,1-16,0V95l-11.56,7.71a8,8,0,1,1-8.88-13.32l24-16A8,8,0,0,1,140,80Z"
+            ></path>
+          </svg>
         </div>
-        <div class="details-cell" id="x">
+        <div class="details-cell">
+          <div id="point-timer">00:00</div>
+          <div id="point-timer-logo">.</div>
+        </div>
+        <div class="target-cell" id="x">
           <div class="point-time-line">.</div>
         </div>
 
-        <div class="details-cell">🎯</div>
-        <div class="details-cell" id="target-timer-cell">00:00</div>
-        <div class="details-cell" id="y">
+        <div class="logo-cell">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="details-cell">
+          <div id="target-timer-cell">00:00</div>
+          <div id="point-timer-logo-2">.</div>
+        </div>
+        <div class="target-cell" id="y">
           <div class="target-time-line">.</div>
         </div>
 
-        <div class="details-cell">🏆</div>
+        <div class="logo-cell">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-28.49,64.64-63.51,64.9H128a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"
+            ></path>
+          </svg>
+        </div>
         <div class="details-cell" id="all-targets-timer-cell">00:00</div>
-        <div class="details-cell" id="z">
-          <div class="useful-time-line">U</div>
-          <div class="learn-time-line">L</div>
-          <div class="work-time-line">W</div>
-          <div class="physical-time-line">Ph</div>
+        <div class="target-cell" id="z">
+          <div class="useful-time-line">.</div>
+          <div class="learn-time-line">.</div>
+          <div class="work-time-line">.</div>
+          <div class="physical-time-line">.</div>
         </div>
       </div>
       <nav>

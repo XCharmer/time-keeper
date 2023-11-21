@@ -6,9 +6,10 @@
 
 body {
   display: flex;
-  background-color: #e0e7e9;
+  background-color: #dde6ed;
   justify-content: center;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -17,55 +18,56 @@ body {
   width: 770px;
   margin-top: 30px;
   align-items: center;
-
-  background-color: #e0e8e9;
 }
 
 .main-header {
   display: flex;
   width: 760px;
+  padding: 2px;
 }
 
 .month-title {
   display: flex;
   flex: 1;
   justify-content: left;
+  align-items: center;
+  margin-left: 3px;
 }
 
 .time-current {
   display: flex;
   flex: 1;
   justify-content: center;
+  align-items: center;
 }
 
 .time-left {
   display: flex;
   flex: 1;
   justify-content: right;
+  align-items: center;
+  margin-right: 1px;
 }
 
 .details-table {
   display: grid;
   width: 760px;
   padding: 5px;
-  margin: 10px 5px 5px 5px;
+  margin: 10px 5px 10px 5px;
   height: 105px;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(4, 1fr);
   column-gap: 5px;
   row-gap: 5px;
-
-  background-color: #e2ecf1;
-  box-shadow: 0px 0px 3px #cbd4c2;
 }
 
 .details-cell {
   display: flex;
   height: 20px;
-  background-color: #e8f4fa;
+  background-color: #edf2ff;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 3px #cbd4c2;
+  box-shadow: 0px 0px 3px #adb5bd;
   gap: 5px;
 }
 
@@ -89,11 +91,12 @@ button {
   display: grid;
   width: 25px;
   cursor: pointer;
-  box-shadow: 0px 0px 2px gray;
+  box-shadow: 0px 0px 3px #868e96;
   border: none;
   outline: none;
   border-radius: 5px;
-  color: rgb(98, 97, 179);
+  background-color: #edf2ff;
+  color: #7048e8;
   font-size: 13px;
 }
 
@@ -102,12 +105,14 @@ nav button {
   height: 20px;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0px 0px 2px gray;
+  box-shadow: 0px 0px 3px #868e96;
   border: none;
   outline: none;
   border-radius: 5px;
-  background-color: #e8f4fa;
-  color: rgb(98, 97, 179);
+  background-color: #edf2ff;
+  color: #7048e8;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .target-table {
@@ -115,15 +120,28 @@ nav button {
   width: 760px;
   height: 80px;
   padding: 5px;
-  margin: 5px 10px 5px 10px;
+  margin: 5px 10px 20px 10px;
   column-gap: 5px;
   row-gap: 5px;
   grid-template-columns: 25px 72px 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
-
-  background-color: #e2ecf1;
-  box-shadow: 0px 0px 3px #cbd4c2;
   transition: 0.3s ease;
+}
+
+.logo-cell {
+  display: flex;
+  height: 20px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.target-cell {
+  display: flex;
+  height: 20px;
+  background-color: #edf2ff;
+  justify-content: center;
+  box-shadow: 0px 0px 3px #adb5bd;
 }
 
 #x {
@@ -132,7 +150,7 @@ nav button {
 }
 
 .point-time-line {
-  background-color: rgb(98, 97, 179);
+  background-color: #0b7285;
   flex: 0.9;
   transition: 0.3s ease;
 }
@@ -143,7 +161,7 @@ nav button {
 }
 
 .target-time-line {
-  background-color: rgb(123, 179, 97);
+  background-color: #0b7285;
   flex: 0.9;
   transition: 0.3s ease;
 }
@@ -155,36 +173,37 @@ nav button {
 }
 
 .learn {
-  background-color: rgb(123, 179, 97);
+  background-color: #66a80f;
 }
 
 .work {
-  background-color: rgb(96, 163, 132);
+  background-color: #2f9e44;
 }
 
 .physical {
-  background-color: rgb(85, 201, 185);
+  background-color: #12b886;
 }
 
 .learn-time-line {
-  background-color: rgb(123, 179, 97);
+  background-color: #66a80f;
+
   flex: 5;
   transition: 0.3s ease;
 }
 .work-time-line {
-  background-color: rgb(96, 163, 132);
+  background-color: #2f9e44;
   flex: 10;
   transition: 0.3s ease;
 }
 
 .physical-time-line {
-  background-color: rgb(85, 201, 185);
+  background-color: #12b886;
   flex: 10;
   transition: 0.3s ease;
 }
 
 .useful-time-line {
-  background-color: rgb(98, 97, 179);
+  background-color: #0b7285;
   flex: 10;
   transition: 0.3s ease;
 }
@@ -192,14 +211,14 @@ nav button {
 nav {
   display: flex;
   width: 100%;
-  margin: 5px;
+  margin: 0 0 20px 0;
 }
 
 .nav-left {
   display: flex;
   flex: 1;
   justify-content: left;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .nav-center {
@@ -209,18 +228,18 @@ nav {
   align-items: center;
   display: grid;
   cursor: pointer;
-  box-shadow: 0px 0px 2px gray;
+  box-shadow: 0px 0px 3px #adb5bd;
   border: none;
   outline: none;
-  background-color: #deedf5;
-  font-size: 15px;
+  background-color: #edf2ff;
+  font-size: 16px;
 }
 
 .nav-right {
   display: flex;
   flex: 1;
   justify-content: right;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .day-title {
@@ -231,11 +250,12 @@ nav {
   display: flex;
   width: 760px;
   margin: 5px;
-  box-shadow: 0px 0px 2px gray;
+  box-shadow: 0px 0px 3px #adb5bd;
+  margin: 5px 10px 20px 10px;
   border: none;
   outline: none;
-  background-color: #e2ecf1;
-  font-size: 15px;
+  background-color: #edf2ff;
+  font-size: 16px;
 }
 
 .weekdays div {
@@ -258,25 +278,25 @@ nav {
   height: 100px;
   padding: 10px;
   cursor: pointer;
-  background-color: white;
+  background-color: #edf2ff;
   margin: 5px;
-  box-shadow: 0px 0px 3px #cbd4c2;
+  box-shadow: 0px 0px 3px #91a7ff;
 
   flex-direction: column;
   justify-content: space-between;
 }
 
 .day:hover {
-  background-color: #deedf5;
+  background-color: #99e9f2;
 }
 
 .day + #current-day {
-  background-color: #deedf5;
+  background-color: #afd3f0;
 }
 
 .padding {
   cursor: default !important;
-  background-color: #e0e8e9 !important;
+  background-color: #dde6ed !important;
   box-shadow: none !important;
 }
 
