@@ -204,10 +204,10 @@ nav button {
 
 .learn-time-line {
   background-color: #66a80f;
-
   flex: 5;
   transition: 0.3s ease;
 }
+
 .work-time-line {
   background-color: #2f9e44;
   flex: 10;
@@ -375,6 +375,45 @@ nav {
   .day {
     width: 7rem;
     height: 7rem;
+  }
+
+  .activity {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 29em) {
+  .container {
+    width: 47rem;
+  }
+
+  .main-header {
+    width: 46rem;
+  }
+
+  .details-table {
+    width: 46rem;
+    font-size: 1.4rem;
+  }
+
+  .target-table {
+    width: 46rem;
+  }
+
+  .nav-center {
+    font-size: 1.3rem;
+  }
+
+  .weekdays {
+    width: 46rem;
+    font-size: 1.3rem;
+  }
+
+  .day {
+    width: 5.7rem;
+    height: 5.7rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
   }
 
   .activity {
