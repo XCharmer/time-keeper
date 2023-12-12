@@ -351,9 +351,33 @@ nav {
   }
 }
 
-@media (max-width: 40em) {
-  /* 8px / 16px = */
-  html {
-    font-size: 43.75%;
+@media (max-width: 38em) {
+  .container {
+    width: 57rem;
+  }
+
+  .main-header {
+    width: 56rem;
+  }
+
+  .details-table {
+    width: 56rem;
+  }
+
+  .target-table {
+    width: 56rem;
+  }
+
+  .weekdays {
+    width: 56rem;
+  }
+
+  .day {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .activity {
+    font-size: 1rem;
   }
 }
