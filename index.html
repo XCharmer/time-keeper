@@ -19,6 +19,7 @@
       <header class="main-header">
         <div>
           <svg
+            class="header-logo"
             xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="25"
@@ -35,6 +36,7 @@
         <div class="time-left"></div>
         <div>
           <svg
+            class="header-logo"
             xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="25"
@@ -52,9 +54,9 @@
         <div class="details-cell">#</div>
         <div class="details-cell">Total</div>
         <div class="details-cell">P_Timer</div>
-        <div class="details-cell">Points R</div>
-        <div class="details-cell">Points T</div>
-        <div class="details-cell">Points L</div>
+        <div class="details-cell">P_Recd</div>
+        <div class="details-cell">P_Total</div>
+        <div class="details-cell">P_Left</div>
         <div class="details-cell">%</div>
         <div class="details-cell">
           <div class="action-title">Learn</div>
@@ -83,7 +85,7 @@
         <div id="work-points-left" class="details-cell">16</div>
         <div id="work-percent" class="details-cell">17</div>
         <div class="details-cell">
-          <div class="action-title">Physical</div>
+          <div class="action-title">PE</div>
           <div class="action-buttons">
             <button id="physical-start-button">▶</button>
             <button class="hidden" id="physical-stop-button">II</button>
@@ -113,10 +115,10 @@
         </div>
         <div class="target-details-cell">
           <div id="point-timer">00:00</div>
-          <div id="point-timer-logo">.</div>
+          <div id="point-timer-logo">&nbsp;</div>
         </div>
         <div class="target-cell" id="x">
-          <div class="point-time-line">.</div>
+          <div class="point-time-line">&nbsp;</div>
         </div>
 
         <div class="logo-cell">
@@ -134,10 +136,10 @@
         </div>
         <div class="target-details-cell">
           <div id="target-timer-cell">00:00</div>
-          <div id="point-timer-logo-2">.</div>
+          <div id="point-timer-logo-2">&nbsp;</div>
         </div>
         <div class="target-cell" id="y">
-          <div class="target-time-line">.</div>
+          <div class="target-time-line">&nbsp;</div>
         </div>
 
         <div class="logo-cell">
@@ -155,10 +157,10 @@
         </div>
         <div class="target-details-cell" id="all-targets-timer-cell">00:00</div>
         <div class="target-cell" id="z">
-          <div class="useful-time-line">.</div>
-          <div class="learn-time-line">.</div>
-          <div class="work-time-line">.</div>
-          <div class="physical-time-line">.</div>
+          <div class="useful-time-line">&nbsp;</div>
+          <div class="learn-time-line">&nbsp;</div>
+          <div class="work-time-line">&nbsp;</div>
+          <div class="physical-time-line">&nbsp;</div>
         </div>
       </div>
       <nav>
