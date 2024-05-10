@@ -164,7 +164,10 @@ const load = function () {
     daySquare.dataset.day = dayString;
 
     if (i > paddingDays) {
-      daySquare.innerText = i - paddingDays;
+      const dayNumber = document.createElement('div');
+      dayNumber.classList.add('day-number');
+      daySquare.appendChild(dayNumber);
+      dayNumber.innerText = i - paddingDays;
       const activityForDay = dataBase.filter((e) => e.date === dayString);
 
       if (i - paddingDays === day && nav === 0) {
