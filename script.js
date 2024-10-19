@@ -363,7 +363,6 @@ const selectDay = function (dayElement = 0) {
       lastSelectedDay = dayElement;
     }
   } else {
-    console.log('!!!');
     const clearDayInd = dataBase.findIndex((e) => e.date === 0);
     clearInterval(timer);
     if (dayElement) dayElement.classList.add('selected');
@@ -384,8 +383,18 @@ calendar.addEventListener('click', (e) => {
   if (
     e.target.classList.contains('day') &&
     !e.target.classList.contains('padding')
-  )
+  ) {
     clickedDay = e.target;
+    console.log(clickedDay);
+  }
+
+  if (
+    e.target.classList.contains('day-number') &&
+    !e.target.classList.contains('padding')
+  ) {
+    clickedDay = e.target.closest('.day');
+    console.log(clickedDay);
+  }
 
   if (clickedDay) selectDay(clickedDay);
 });
@@ -409,7 +418,6 @@ lockWakeState();
 
 const initButtons = function () {
   learnStartButton.addEventListener('click', (e) => {
-    console.log(e);
     e.preventDefault();
     clearInterval(timer);
     timer = timeRecorder('learn');
@@ -504,3 +512,4 @@ clearLS(); */
 
 /* dataBase.splice();
 localStorage.setItem('data', JSON.stringify([dataBase])); */
+//
